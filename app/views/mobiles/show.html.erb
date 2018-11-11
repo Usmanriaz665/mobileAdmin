@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @mobile.title %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @mobile.model %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @mobile.color %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @mobile.price %>
+</p>
+
+<p>
+  <strong>Discription:</strong>
+  <%= @mobile.discription %>
+</p>
+
+<%= link_to 'Edit', edit_mobile_path(@mobile) %> |
+<%= link_to 'Back', mobiles_path %>

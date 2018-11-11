@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mobiles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Model</th>
+      <th>Color</th>
+      <th>Price</th>
+      <th>Discription</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mobiles.each do |mobile| %>
+      <tr>
+        <td><%= mobile.title %></td>
+        <td><%= mobile.model %></td>
+        <td><%= mobile.color %></td>
+        <td><%= mobile.price %></td>
+        <td><%= mobile.discription %></td>
+        <td><%= link_to 'Show', mobile %></td>
+        <td><%= link_to 'Edit', edit_mobile_path(mobile) %></td>
+        <td><%= link_to 'Destroy', mobile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mobile', new_mobile_path %>
